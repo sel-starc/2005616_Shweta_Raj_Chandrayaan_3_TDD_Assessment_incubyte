@@ -1,0 +1,38 @@
+#include "Spacecraft.h"  
+#include <gtest/gtest.h>
+
+TEST(SpacecraftTest, InitialPositionAndDirection) {
+    Spacecraft sc(0, 0, 0, 'N');
+    sc.showPosition();
+  
+}
+
+TEST(SpacecraftTest, ForwardMovement) {
+    Spacecraft sc(0, 0, 0, 'N');
+    sc.doCommand('f');
+  
+}
+
+TEST(SpacecraftTest, BackwardMovement) {
+    Spacecraft sc(0, 0, 0, 'N');
+    sc.doCommand('b');
+   
+}
+
+TEST(SpacecraftTest, LeftTurnFromNorth) {
+    Spacecraft sc(0, 0, 0, 'N');
+    sc.doCommand('l');
+  
+}
+
+TEST(SpacecraftTest, RightTurnFromNorth) {
+    Spacecraft sc(0, 0, 0, 'N');
+    sc.doCommand('r');
+  
+}
+
+
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}
